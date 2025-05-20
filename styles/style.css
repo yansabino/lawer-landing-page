@@ -1,0 +1,385 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif; /* Choose a professional font */
+    line-height: 1.6;
+    color: #444444; /* Changed from #333 */
+    background-color: #F0F0F0; /* Changed from #f4f4f4 */
+}
+
+.container {
+    width: 90%; /* Responsive width */
+    margin: auto;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    background: #444444; /* Changed from #333 */
+    color: #ffffff; /* Changed from #fff */
+    padding-top: 10px;
+    min-height: 50px;
+    border-bottom: #003366 3px solid; /* Changed from #0779e4 */
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between; /* Space between logo and nav */
+    align-items: center;
+    flex-direction: row; /* Changed from column to row for small screens */
+    /* text-align: center; Removed as flex handles alignment */
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    /* margin-bottom: 10px; Removed as items are row now */
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline; /* Display nav items inline */
+    margin-left: 20px;
+}
+
+header nav a {
+    color: #ffffff; /* Changed from #fff */
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+header nav a:hover {
+    color: #003366; /* Changed from #0779e4 */
+}
+
+/* Hero Section */
+.hero {
+    background: #003366; /* Changed from #0779e4 */
+    color: #ffffff; /* Changed from #fff */
+    min-height: 400px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.hero h1 {
+    margin: 0 0 10px 0;
+    font-size: 3em; /* Larger font for impact */
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    background: #444444; /* Changed from #333 */
+    color: #FFD700; /* Changed from #ffffff to gold */
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+}
+
+.cta-button:hover {
+    background: #003366; /* Changed from #666666 to dark blue on hover */
+    color: #ffffff; /* White text on dark blue hover */
+}
+
+/* Sections (Services, About, Contact, etc.) */
+section {
+    padding: 40px 0;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #444444; /* Changed from #333 */
+}
+
+.services .service-items,
+.testimonials .testimonial-items {
+    display: flex;
+    flex-direction: column; /* Stack items on small screens */
+    gap: 20px; /* Space between items */
+}
+
+.service-item,
+.testimonial-item {
+    background: #ffffff; /* Keep white background for items */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid #C0C0C0; /* Added silver border */
+}
+
+.service-item h3 {
+    margin-bottom: 10px;
+    color: #003366; /* Changed from #0779e4 */
+}
+
+.about p,
+.contact address {
+    max-width: 800px; /* Limit text width for readability */
+    margin: 20px auto;
+    text-align: left; /* Align text left for readability */
+}
+
+address p {
+    margin-bottom: 10px;
+}
+
+address a {
+    color: #003366; /* Changed from #003366 to gold */
+    text-decoration: none;
+}
+
+address a:hover {
+    text-decoration: underline;
+    color: #C0C0C0; /* Slightly lighter color on hover */
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+    vertical-align: middle; /* Align icons vertically with surrounding text if any */
+}
+
+/* Footer */
+footer {
+    background: #444444; /* Changed from #333 */
+    color: #ffffff; /* Changed from #fff */
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    header .container {
+        flex-direction: row; /* Side-by-side on larger screens */
+    }
+
+    header .logo {
+        margin-bottom: 0; /* Remove margin on larger screens */
+    }
+
+    header nav ul li {
+        margin-left: 20px;
+        margin-right: 0;
+    }
+
+    .services .service-items,
+    .testimonials .testimonial-items {
+        flex-direction: row; /* Side-by-side on larger screens */
+        justify-content: center;
+        flex-wrap: wrap; /* Allow wrapping */
+    }
+
+    .service-item,
+    .testimonial-item {
+        flex: 1; /* Distribute space */
+        min-width: 300px; /* Minimum width for items */
+        max-width: 400px; /* Maximum width for items */
+    }
+
+    .about p,
+    .contact address {
+        text-align: center; /* Center text again on larger screens if preferred */
+    }
+}
+
+/* Styling for the About section with image and divider */
+.about-content {
+    display: flex;
+    flex-direction: column; /* Stack content by default on small screens */
+    align-items: center; /* Center items when stacked */
+    gap: 30px; /* Space between stacked items */
+}
+
+.about-text {
+    flex: 1; /* Allow text to take available space on larger screens */
+    max-width: 100%; /* Prevent overflow on small screens */
+}
+
+.about-image img {
+    max-width: 60%; /* Ensure image is responsive */
+    height: auto;
+    border-radius: 5px; /* Optional: add rounded corners to the image */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: add a subtle shadow */
+}
+
+.about-divider {
+    width: 50px; /* Width of the divider when stacked */
+    height: 3px; /* Height of the divider when stacked */
+    background-color: #C0C0C0; /* Silver color for the divider */
+}
+
+/* Responsive adjustments for larger screens */
+@media (min-width: 768px) {
+    .about-content {
+        flex-direction: row; /* Arrange content side-by-side on larger screens */
+        align-items: flex-start; /* Align items to the top */
+        gap: 50px; /* Space between items on larger screens */
+    }
+
+    .about-text {
+        max-width: 35%; /* Adjusted max-width for text */
+        text-align: left; /* Align text left */
+    }
+
+    .about-image {
+         flex-basis: 30%; /* Adjusted width for image */
+         max-width: 30%; /* Ensured image doesn't exceed this width */
+    }
+
+    .about-divider {
+        width: 3px; /* Width of the divider when side-by-side */
+        height: auto; /* Height will be determined by content */
+        align-self: stretch; /* Make the divider stretch vertically */
+    }
+}
+
+/* Styling for the Address tag in the contact section */
+.contact address {
+    text-align: center; /* Center text content inside address */
+    margin-left: auto;
+    margin-right: auto;
+    /* You might need to set a max-width if you want it to not take up the full width */
+    /* max-width: 500px; */
+}
+
+/* Hamburger Menu Styles */
+.nav-menu {
+    order: -1; /* Place nav menu first on small screens */
+    position: relative; /* Needed for absolute positioning of the menu */
+}
+
+.hamburger-toggle {
+    display: block; /* Show button by default on small screens */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 100; /* Ensure toggle button is above other content */
+}
+
+.hamburger-icon {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #FFD700; /* Changed from #ffffff to gold */
+    margin: 5px 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu-links {
+    display: none; /* Hide menu by default */
+    flex-direction: column; /* Stack links vertically */
+    background: #444444; /* Dark grey background */
+    position: absolute;
+    top: 100%; /* Position below the header */
+    left: 0;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Increased z-index to ensure visibility */
+}
+
+.menu-links.open {
+    display: flex; /* Show menu when the 'open' class is added */
+    min-height: 150px; /* Add a minimum height for debugging */
+    background-color: rgba(68, 68, 68, 0.9); /* Slightly transparent background to see if it's there */
+}
+
+.menu-links ul {
+    list-style: none;
+    padding: 0;
+    width: 100%; /* Ensure list takes full width of menu-links */
+}
+
+.menu-links ul li {
+    display: block; /* Stack list items */
+    text-align: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #666666; /* Add subtle separator */
+}
+
+.menu-links ul li:last-child {
+    border-bottom: none;
+}
+
+.menu-links a {
+    color: #FFD700; /* Changed from #ffffff to gold */
+    text-decoration: none;
+    font-size: 1em;
+    display: block; /* Make the whole list item clickable */
+}
+
+.menu-links a:hover {
+    background-color: #555555; /* Slightly darker grey on hover */
+    color: #ffffff; /* White text on hover */
+}
+
+/* Responsive Design: Show full menu on larger screens */
+@media (min-width: 768px) {
+    header .container {
+        flex-direction: row; /* Side-by-side on larger screens */
+    }
+
+    header .logo {
+        margin-bottom: 0; /* Remove margin on larger screens */
+    }
+
+    /* Hide hamburger toggle on larger screens */
+    .hamburger-toggle {
+        display: none;
+    }
+
+    /* Show full menu links horizontally on larger screens */
+    .menu-links {
+        display: block; /* Revert to block display for horizontal menu */
+        position: static; /* Remove absolute positioning */
+        box-shadow: none;
+        background: none; /* No background */
+        flex-direction: row; /* Arrange links horizontally */
+        width: auto; /* Auto width */
+        order: 0; /* Reset order on larger screens */
+    }
+
+    .menu-links ul {
+        display: flex; /* Use flexbox for horizontal list */
+        width: auto; /* Auto width */
+    }
+
+    .menu-links ul li {
+        display: inline-block; /* Display nav items inline */
+        margin-left: 20px;
+        padding: 0;
+        border-bottom: none; /* Remove separator */
+    }
+
+    .menu-links a {
+        color: #ffffff; /* Keep white link color on larger screens for dark header */
+        font-size: 16px; /* Match header nav font size */
+    }
+
+    .menu-links a:hover {
+        color: #003366; /* Dark blue on hover */
+        background-color: transparent; /* Remove background hover effect */
+    }
+}
