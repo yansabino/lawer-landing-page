@@ -18,7 +18,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-pages-artifact@v3
         with:
           path: . # Upload the entire root directory
 
