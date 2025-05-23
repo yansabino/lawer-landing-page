@@ -57,7 +57,7 @@
     font-size: 0.9em;
   }
   
-  .cta-button img {
+  .cta-button img[src*="whatsapp.png"] {
     width: 20px;
     margin-right: 5px;
     vertical-align: middle;
@@ -163,6 +163,13 @@
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
   }
   
+  .amz-ico {
+    color: #fff;
+    width: 20px;
+    vertical-align: middle;
+    margin-right: 10px;
+  }
+  
   /* CONTATO */
   .contact {
     background-color: #003366;
@@ -207,6 +214,7 @@
   
     .service-item,
     .testimonial-slide {
+      margin: 0 auto;
       flex: 1;
       min-width: 300px;
       max-width: 400px;

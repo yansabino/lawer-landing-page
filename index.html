@@ -130,7 +130,7 @@
             DINHEIRO DO CONTRIBUINTE.</p>
           <a href="https://www.amazon.com.br/TRIBUT%C3%81RIO-COMO-ELE-%C3%89-ebook/dp/B0C6SQ3C85" target="_blank"
             class="cta-button">
-            <img src="assets/amazon.png" alt="Amazon Icon" />Adquirir na Amazon
+            <img class="amz-ico" src="assets/amazon.png" alt="Amazon Icon" />Adquirir na Amazon
           </a>
         </div>
         <div class="book-image">
@@ -174,9 +174,13 @@
     // Carrossel de testemunhos
     const slides = document.querySelectorAll('.testimonial-slide');
     let current = 0;
+    
+    // Function to show a specific slide
     function showSlide(index) {
       slides.forEach((slide, i) => slide.classList.toggle('active', i === index));
     }
+    
+    // Function to go to the next slide
     function nextSlide() {
       current = (current + 1) % slides.length;
       showSlide(current);
