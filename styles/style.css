@@ -177,6 +177,10 @@
     text-decoration: underline;
     color: #c0c0c0;
   }
+
+  .contact h2 {
+    color: #fff;
+  }
   
   /* FOOTER */
   footer {
