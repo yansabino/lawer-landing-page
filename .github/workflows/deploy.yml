@@ -3,7 +3,11 @@ name: Deploy static site to GitHub Pages
 on:
   push:
     branches:
-      - main # Change this if your default branch is not main
+      - main # Set to main as the branch was renamed
+  pull_request:
+    types: [closed]
+    branches:
+      - main
   workflow_dispatch:
 
 jobs:
